@@ -23,7 +23,7 @@ links.forEach(function(link){
 
         // Redireccionarnos a la pag principal el index
         setTimeout(function(){
-            location.href = "/";
+            location.href = "/boletines";
         }, 1000);
 
         return false;
