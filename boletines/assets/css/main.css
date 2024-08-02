@@ -1,0 +1,177 @@
+html{
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+}
+
+.title{
+    text-transform: uppercase;
+    /* alinear el texto al centro, dentro de una caja inline */
+    text-align: center;
+}
+
+.container{
+    background: #800080;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    max-width: 960px;
+    width: 100%;
+    height: 80vh;
+    background-color: #fff;
+    padding: 1em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    /* defino el padre del componente que quiero manipular */
+    position: relative;
+    overflow: scroll;
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+}
+
+th{
+    display: none;
+}
+
+.actions{
+    /* defino su posicion absoluto referente al padre del componente */
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.close{
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 50%;
+    background-color: #642B73;
+    display: inline-block;
+    /* agrego una sombra en el boton de cierre de la página */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    font-weight: 300;
+    /* defino el puntero de la manito */
+    cursor: pointer;
+    /* defino que el contenido se centre con display flex */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragraph{
+    line-height: 1.8em;
+    font-weight: 200;
+}
+
+.fa-star, .fa-regular{
+    color: #ffc400;
+}
+
+a{
+    text-decoration: none;
+    color: #d500f9;
+}
+
+img{
+    max-width: 100%;
+}
+
+a:hover{
+    opacity: 0.5;
+}
+
+.table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.table td, .table th{
+    padding: 1em;
+    text-align: left;
+}
+
+.table tr:nth-child(even){ background-color: #f3e5f5; }
+
+.title-item{
+    border-bottom: solid 2px #C6426E;
+    padding-bottom: 1em;
+    font-size: 2em;
+}
+
+.address{
+    font-weight: bold;
+    color: #642B73;
+    font-size: 1.2em;
+    margin-top: 1em;
+    /* hay que modificar el displar, xq el display inline no respeta los margenes */
+    display: inline-block;
+}
+
+.main-image{
+    float: left;
+    margin-right: 1em;
+    height: 250px;
+}
+
+.position{
+    background-color: #C6426E;
+    color: white;
+    padding: 0.5em;
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+
+@media (max-width: 600px){
+    th{display: none;}
+    /* par partir la tabla */
+    td{
+        display: block;
+        width: 100%;
+    }
+    /* establesco que el primer dato sea mas relevante que el resto */
+    td:nth-of-type(1){
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #642B73;
+    }
+}
+
+@media (min-width: 960px){
+    td{
+        display: table-cell;
+    }
+    th{
+        width: auto;
+        display: table-cell;
+    }
+
+    td:nth-of-type(1){
+        font-size: 1em;
+    }
+
+    .content{
+        padding: 1.8em;
+    }
+}
+
+@media (max-height: 550px){
+    .content{
+        height: 500px;
+    }
+}
+
+/* 
+        PALETA
+    Color Theme Swatches in Hex 
+.Pastel-theme-with-orange-1-hex { color: #800080; }
+.Pastel-theme-with-orange-2-hex { color: #550E55; }
+.Pastel-theme-with-orange-3-hex { color: #D447D4; }
+.Pastel-theme-with-orange-4-hex { color: #FF80FF; }
+.Pastel-theme-with-orange-5-hex { color: #FFAAFF; }
+
+*/
